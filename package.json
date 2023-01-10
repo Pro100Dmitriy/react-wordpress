@@ -1,0 +1,21 @@
+{
+  "name": "react-wordpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/blocks": "^12.1.0",
+    "@wordpress/create-block": "^4.8.0",
+    "@wordpress/editor": "^13.1.0",
+    "@wordpress/scripts": "^25.1.0"
+  }
+}

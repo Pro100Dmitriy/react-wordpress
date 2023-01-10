@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/section-404",
+  "title": "404 Error",
+  "category": "text",
+  "icon": "warning",
+  "description": "Display 404 error with a custom message. Usually used on the \"Page Not Found\" page.",
+  "attributes": {
+    "mode": "preview"
+  },
+  "acf": {
+    "mode": "preview"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
