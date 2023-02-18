@@ -1,0 +1,15 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/example-03-editable-esnext",
+  "title": "Example: Basic with block supports 123",
+  "category": "text",
+  "icon": "universal-access-alt",
+  "editorScript": "file:./index.js",
+  "supports": {
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    }
+  }
+}

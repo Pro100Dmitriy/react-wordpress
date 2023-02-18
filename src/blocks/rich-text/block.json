@@ -1,0 +1,11 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/rich-text",
+  "title": "Rich Text",
+  "category": "text",
+  "icon": "smile",
+  "description": "Some description",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
