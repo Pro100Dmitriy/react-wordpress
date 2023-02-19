@@ -15,27 +15,6 @@ export type Attributes = {
 }
 
 registerBlockType( metadata.name, {
-    variations: [
-        {
-            name: 'wordpress',
-            isDefault: true,
-            title: __( 'WordPress' ),
-            description: __( 'Code is poetry!' ),
-            attributes: { providerNameSlug: 'wordpress' },
-        },
-        {
-            name: 'google',
-            title: __( 'Google' ),
-            attributes: { providerNameSlug: 'google' },
-        },
-        {
-            name: 'twitter',
-            title: __( 'Twitter' ),
-            attributes: { providerNameSlug: 'twitter' },
-            keywords: [ __('tweet') ],
-        },
-    ],
-
     attributes: {
         title: {
             type: 'string',
