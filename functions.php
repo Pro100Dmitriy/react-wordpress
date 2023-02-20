@@ -43,6 +43,14 @@ function init_theme() {
 			'skip_inner_blocks' => true,
 		)
 	);
+
+	// Metq block
+	register_post_meta( 'post', 'myguten_meta_block_field', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
+	register_block_type( __DIR__ . '/build/blocks/meta-block/block.json' );
 }
 add_action( 'after_setup_theme', 'init_theme' );
 
