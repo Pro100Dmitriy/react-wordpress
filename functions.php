@@ -4,6 +4,9 @@ function init_theme() {
 	require_once( 'config/constants.php' );
 
 	require_once( 'lib/acf/theme-options.php' );
+	require_once( 'lib/block-categories.php' );
+
+	register_block_type( __DIR__ . '/build/blocks/sections/intro/block.json' );
 
 	register_block_type( __DIR__ . '/build/blocks/section-error/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/rich-text/block.json' );

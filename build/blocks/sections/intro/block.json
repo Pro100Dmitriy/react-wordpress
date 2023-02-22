@@ -1,0 +1,11 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/intro",
+  "title": "Hero",
+  "category": "sections",
+  "icon": "block-default",
+  "description": "Display hero section.",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

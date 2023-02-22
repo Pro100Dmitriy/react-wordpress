@@ -25,11 +25,11 @@ const SectionErrorEdit = ( props: IProps ) => {
     const { attributes, setAttributes } = props
     const blockProps = useBlockProps()
 
-    console.log( wp.components )
-    console.log( wp.editor )
-    console.log( acf )
-    console.log( acf.getField( 'field_63bac1a2c607f' ).val() )
-    console.log( i18n )
+    // console.log( wp.components )
+    // console.log( wp.editor )
+    // console.log( acf )
+    // console.log( acf.getField( 'field_63bac1a2c607f' ).val() )
+    // console.log( i18n )
 
     const changeTitle = event => {
         setAttributes( { title: event.target.innerText } )
