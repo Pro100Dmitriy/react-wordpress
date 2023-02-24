@@ -12,13 +12,16 @@ import './styles/style.scss'
 // Data
 import metadata from './block.json'
 
+// Types
+import { backgroundType } from '../../components/section-background'
+
 
 export type TAttributes = {
+    backgroundType: backgroundType
     backgroundImage: string
     backgroundImageAlt: string
     backgroundVideo: string
     posterImage: string
-    posterImageAlt: string
     title: string
     kicker: string
 }
@@ -26,22 +29,22 @@ export type TAttributes = {
 
 registerBlockType( metadata.name, {
     attributes: {
+        backgroundType: { type: 'string' },
         backgroundImage: { type: 'string' },
         backgroundImageAlt: { type: 'string' },
         backgroundVideo: { type: 'string' },
         posterImage: { type: 'string' },
-        posterImageAlt: { type: 'string' },
         title: { type: 'string' },
         kicker: { type: 'string' }
     },
 
     example: {
         attributes: {
+            backgroundType: '',
             backgroundImage: '',
             backgroundImageAlt: '',
             backgroundVideo: '',
             posterImage: '',
-            posterImageAlt: '',
             title: 'Intro Section',
             kicker: 'Kicker'
         }
