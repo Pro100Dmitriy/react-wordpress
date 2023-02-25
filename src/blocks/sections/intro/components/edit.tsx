@@ -1,5 +1,5 @@
 // Libs
-import { TextControl } from '@wordpress/components'
+import { TextControl, __experimentalInputControl as InputControl } from '@wordpress/components'
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor'
 import { __ } from '@wordpress/i18n'
 
@@ -23,6 +23,14 @@ const IntroEdit = ( props: TProps ) => {
     const blockProps = useBlockProps()
 
     const THEME_TEXT_DOMAIN = 'react-wordpress'
+
+    const setTitle = ( value: string ) => {
+        setAttributes( { title: value } )
+    }
+
+    const setKicker = ( value: string ) => {
+        setAttributes( { kicker: value } )
+    }
 
     const setType = ( type: backgroundType ) => {
         setAttributes( { backgroundType: type } )
@@ -52,29 +60,19 @@ const IntroEdit = ( props: TProps ) => {
                         setPoster={ setPoster }
                     />
 
-                    <fieldset>
-                        <legend className="blocks-base-control__label">
-                            { __( 'Title', THEME_TEXT_DOMAIN ) }
-                        </legend>
+                    <InputControl
+                        label={ __( 'Title', THEME_TEXT_DOMAIN ) }
+                        value={ title }
+                        placeholder={ __( 'Type Title', THEME_TEXT_DOMAIN ) }
+                        onChange={ ( value: string ) => setTitle( value ?? '' ) }
+                    />
 
-                        <TextControl
-                            value={ 'Something' }
-                            type="text"
-                            onChange={ ( value: string ) => console.log( value ) }
-                        />
-                    </fieldset>
-
-                    <fieldset>
-                        <legend className="blocks-base-control__label">
-                            { __( 'Kicker', THEME_TEXT_DOMAIN ) }
-                        </legend>
-
-                        <TextControl
-                            value={ 'Something' }
-                            type="text"
-                            onChange={ ( value: string ) => console.log( value ) }
-                        />
-                    </fieldset>
+                    <InputControl
+                        label={ __( 'Kicker', THEME_TEXT_DOMAIN ) }
+                        value={ kicker }
+                        placeholder={ __( 'Type Kicker', THEME_TEXT_DOMAIN ) }
+                        onChange={ ( value: string ) => setKicker( value ?? '' ) }
+                    />
                 </div>
             </InspectorControls>
 
