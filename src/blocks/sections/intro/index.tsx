@@ -13,7 +13,7 @@ import './styles/style.scss'
 import metadata from './block.json'
 
 // Types
-import { backgroundType } from '../../components/section-background'
+import { backgroundType } from '../../../components/section-background'
 
 
 export type TAttributes = {

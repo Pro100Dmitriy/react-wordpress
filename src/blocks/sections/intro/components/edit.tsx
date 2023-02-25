@@ -1,13 +1,13 @@
 // Libs
-import { TextControl, __experimentalInputControl as InputControl } from '@wordpress/components'
+import { __experimentalInputControl as InputControl } from '@wordpress/components'
 import { useBlockProps, InspectorControls } from '@wordpress/block-editor'
 import { __ } from '@wordpress/i18n'
 
 // Components
-import SectionBackground, { BackgroundFields, backgroundType } from '../../../components/section-background'
+import SectionBackground, { BackgroundFields, backgroundType } from '../../../../template-parts/section-background'
 
 // Types
-import { UploadImage, UploadVideo } from '../../../types/types'
+import { UploadImage, UploadVideo } from '../../../../types/types'
 import { TAttributes } from '../'
 
 
@@ -21,6 +21,8 @@ const IntroEdit = ( props: TProps ) => {
     const { attributes, setAttributes } = props
     const { backgroundType: bgType, backgroundImage, backgroundImageAlt, backgroundVideo, posterImage, title, kicker } = attributes
     const blockProps = useBlockProps()
+
+    blockProps.className += ' section section-intro section-intro--style-v2'
 
     const THEME_TEXT_DOMAIN = 'react-wordpress'
 
@@ -48,6 +50,7 @@ const IntroEdit = ( props: TProps ) => {
         setAttributes( { posterImage: url, posterImageAlt: alt } )
     }
 
+    console.log( blockProps )
     return (
         <>
             <InspectorControls key="setting">

@@ -1,6 +1,6 @@
 // Libs
 import { Button, ButtonGroup } from '@wordpress/components'
-import { MediaUpload, InspectorControls } from '@wordpress/block-editor'
+import { MediaUpload } from '@wordpress/block-editor'
 import { useState } from '@wordpress/element'
 import { __ } from '@wordpress/i18n'
 
