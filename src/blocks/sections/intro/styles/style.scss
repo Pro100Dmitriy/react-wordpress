@@ -1,0 +1,35 @@
+@import "../../../../assets/scss/generic/variables";
+@import "../../../../assets/scss/generic/functions";
+@import "../../../../assets/scss/generic/mixins";
+
+.section-intro {
+	position: relative;
+	overflow: hidden;
+	transition: $transition-default;
+
+	&__bg {
+		position: absolute;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+	}
+}
+
+.section-intro.section-intro--style-v2 {
+
+}

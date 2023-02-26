@@ -1,0 +1,1 @@
+.section-intro{overflow:hidden;position:relative;transition:.3s ease-in-out}.section-intro__bg{background-position:50%;background-repeat:no-repeat;background-size:cover;height:100%;left:0;position:absolute;top:0;width:100%;z-index:0}.section-intro__bg:before{bottom:0;content:"";left:0;position:absolute;right:0;top:0;z-index:2}

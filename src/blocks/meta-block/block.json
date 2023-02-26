@@ -1,0 +1,6 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/meta-block",
+  "title": "Example: Test 2",
+  "editorScript": "file:./index.js"
+}

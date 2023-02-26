@@ -1,0 +1,36 @@
+// Colors
+$white: #FFFFFF;
+$white10: rgba($white, 0.1);
+
+$black: #171717;
+
+$red: #ff0000;
+
+$lt-gray-main: #ECECEC;
+$lt-gray-dark: #D7D7D7;
+$lt-gray-light: #F3F3F3;
+$lt-gray-medium: #E3E3E3;
+
+$dt-gray-main: #292929;
+$dt-gray-dark: #1E1E1E;
+$dt-gray-light: #343434;
+$dt-gray-medium: #2A2A2A;
+
+// Transitions
+$transition-duration-default: 0.3s;
+$transition-delay-default: 0.3s;
+$transition-default: 0.3s ease-in-out;
+
+$breakpoints: (
+	mobile-small: 575px,
+	mobile: 767px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1279px,
+	desktop: 1439px,
+	large-desktop: 1719px,
+);
+
+// Other
+$headerHeightDesktop: rem(112);
+$headerHeightTablet: rem(60);

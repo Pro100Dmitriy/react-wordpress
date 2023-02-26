@@ -4,6 +4,9 @@ function init_theme() {
 	require_once( 'config/constants.php' );
 
 	require_once( 'lib/acf/theme-options.php' );
+	require_once( 'lib/block-categories.php' );
+
+	register_block_type( __DIR__ . '/build/blocks/sections/intro/block.json' );
 
 	register_block_type( __DIR__ . '/build/blocks/section-error/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/rich-text/block.json' );
@@ -43,6 +46,14 @@ function init_theme() {
 			'skip_inner_blocks' => true,
 		)
 	);
+
+	// Metq block
+	register_post_meta( 'post', 'myguten_meta_block_field', array(
+		'show_in_rest' => true,
+		'single' => true,
+		'type' => 'string',
+	) );
+	register_block_type( __DIR__ . '/build/blocks/meta-block/block.json' );
 }
 add_action( 'after_setup_theme', 'init_theme' );
 

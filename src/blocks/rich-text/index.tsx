@@ -1,4 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
+import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
 
 import {
     useBlockProps,
@@ -6,6 +7,61 @@ import {
     AlignmentToolbar,
     BlockControls,
 } from '@wordpress/block-editor';
+
+import { RichTextToolbarButton } from '@wordpress/block-editor';
+import { ToolbarGroup, ToolbarButton } from '@wordpress/components';
+
+const MyCustomButton123 = ( { isActive, onChange, value } ) => {
+    return (
+        <BlockControls>
+            <ToolbarGroup>
+                <ToolbarButton
+                    icon="editor-code"
+                    title="Sample output"
+                    onClick={ () => {
+                        onChange(
+                            toggleFormat( value, {
+                                type: 'my-custom-format/sample-output',
+                            } )
+                        );
+                    } }
+                    isActive={ isActive }
+                />
+            </ToolbarGroup>
+        </BlockControls>
+    );
+};
+
+registerFormatType( 'my-custom-format/sample-output-2', {
+    title: 'Sample output 123',
+    tagName: 'span',
+    className: null,
+    edit: MyCustomButton123,
+} );
+
+const MyCustomButton = ( { isActive, onChange, value } ) => {
+    return (
+        <RichTextToolbarButton
+            icon="editor-code"
+            title="Sample output"
+            onClick={ () => {
+                onChange(
+                    toggleFormat( value, {
+                        type: 'my-custom-format/sample-output',
+                    } )
+                );
+            } }
+            isActive={ isActive }
+        />
+    );
+};
+
+registerFormatType( 'my-custom-format/sample-output', {
+    title: 'Sample output',
+    tagName: 'samp',
+    className: null,
+    edit: MyCustomButton
+} );
 
 registerBlockType( 'gutenberg-examples/example-04-controls-esnext', {
     apiVersion: 2,
