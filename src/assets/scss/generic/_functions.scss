@@ -1,16 +1,33 @@
-@import "variables";
+@function breakpoint-next(
+    $name,
+	$breakpoints: $breakpoints,
+	$breakpoint-names: map-keys($breakpoints)
+) {
+    $n: index($breakpoint-names, $name);
+    @return if(
+        $n != null and $n < length($breakpoint-names),
+        nth($breakpoint-names, $n + 1),
+        null
+    );
+}
+
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+    $min: map-get($breakpoints, $name);
+    @return if($min != 0, $min + 0.5, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $breakpoints) {
+    $max: map-get($breakpoints, $name);
+    @return if($max != 0, $max, null);
+}
 
 $html-font-size: 10px;
 $html-font-size-sm: 8px;
 
 @function stripUnit($value) {
-    @return $value / ($value * 0 + 1);
+    @return calc(#{$value} / (#{$value} * 0 + 1));
 }
 
 @function rem($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
-}
-
-@function rem_sm($pxValue) {
-    @return #{stripUnit($pxValue) / stripUnit($html-font-size-sm)}rem;
+    @return calc(#{stripUnit($pxValue) / stripUnit($html-font-size)})rem;
 }

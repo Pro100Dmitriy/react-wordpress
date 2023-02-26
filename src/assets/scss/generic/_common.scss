@@ -1,6 +1,8 @@
-@import "../base/variables";
-@import "../base/functions";
-@import "../base/mixins";
+@import "../generic/variables";
+@import "../generic/functions";
+@import "../generic/mixins";
+
+
 *,
 *::before,
 *::after {
@@ -14,16 +16,4 @@
 
 html {
     font-size: 10px !important;
-
-    @media (max-width: $breakpoint-xxl - 0.5) {
-        font-size: 8px !important;
-    }
-
-    @media (max-width: $breakpoint-xxm - 0.5) {
-        font-size: 8px !important;
-    }
-
-    @media (max-width: $breakpoint-xl - 0.5) {
-        font-size: 10px !important;
-    }
 }
