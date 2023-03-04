@@ -1,0 +1,11 @@
+{
+  "apiVersion": 2,
+  "name": "react-wordpress/tabs",
+  "title": "Tabs",
+  "category": "sections",
+  "icon": "block-default",
+  "description": "Create tabs.",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

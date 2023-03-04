@@ -16,6 +16,7 @@ function init_theme() {
 	register_block_type( __DIR__ . '/build/blocks/dynamic-block-2-supports/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/inner-block-1/block.json' );
 	register_block_type( __DIR__ . '/build/blocks/inner-hook-block/block.json' );
+	register_block_type( __DIR__ . '/build/blocks/tabs/block.json' );
 
 	// Dynamic Blocks
 	$asset_file = include( __DIR__ . '/build/blocks/dynamic-block/index.asset.php' );
